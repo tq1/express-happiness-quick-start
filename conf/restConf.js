@@ -40,15 +40,14 @@ Grouping routes follows waterfall inheritance model. A group assigned to a route
 
 
 module.exports.conf = function(fieldsLoader){
-    return {
-        // API routes signatures
-        routes:{
-            "sample-route":{
-                get:{
-                    alias: "sample-route",
-                    groups:['groupA']
-                }
-            }
+  return {
+    routes:{
+      "sample-route":{
+        get:{
+          alias: "sample-route",
+          groups:['authRequired']
         }
+      }
     }
+  }
 };
